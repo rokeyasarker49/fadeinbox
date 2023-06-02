@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fade in Box</title>
+
+        <style>
+                .container {
+                        position: relative;
+                        width: 50%;
+                }
+                img {
+                        opacity: 1;
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        transition: all 0.5s ease-in-out;
+                }
+                .overlay {
+                        opacity: 0;
+                        transition: all 0.5s ease-in-out;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        text-align: center;
+                }
+                .container:hover img {
+                        opacity: 0.3;
+                }
+                .container:hover .overlay {
+                        opacity: 1;
+                }
+                .text {
+                        background-color: rgb(239, 107, 191);
+                        color: white;
+                        font-size: 20px;
+                        padding: 16px 32px;
+                }
+        </style>
+</head>
+<body>
+        <h1>Fade in Overlay</h1>
+        <h2>Opacity with Box</h2>
+        <p>Hover over the image to see the effect.</p>
+
+        <div class="container">
+                <img src="./img/hijab-girl.jpg">
+                <div class="overlay">
+                        <div class="text">Hijabi Girl</div>
+                </div>
+
+        </div>
+</body>
+</html>
